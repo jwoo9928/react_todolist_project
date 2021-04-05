@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {Button, StyleSheet, TextInput, View} from 'react-native';
 
+import * as SaveTodoList from './SaveTodoList';
+
 const TodoInsert = ({onAddTodo}) => {
   const [newTodoItem, setNewTodoItem] = useState('');
 
@@ -9,6 +11,7 @@ const TodoInsert = ({onAddTodo}) => {
   };
 
   const addTodoHandler = () => {
+    SaveTodoList.setItemToAsync("folder1",newTodoItem);
     onAddTodo(newTodoItem);
     setNewTodoItem('');
   };

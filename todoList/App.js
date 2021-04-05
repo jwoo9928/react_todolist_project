@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import TodoList from './components/TodoList';
 import {SafeAreaView, View, Text, StyleSheet} from 'react-native';
 import TodoInsert from './components/TodoInsert';
+import * as SaveTodoList from './components/SaveTodoList';
 
 const App = () => {
   // todos: {id: Number, textValue: string, checked: boolean }
@@ -12,10 +13,13 @@ const App = () => {
       ...todos,
       {id: Math.random().toString(), textValue: text, checked: false},
     ]);
+    //check;
   };
 
   const onRemove = id => e => {
     setTodos(todos.filter(todo => todo.id !== id));
+    console.log(todos.textValue);
+    SaveTodoList.deleteItemToAsync("folder1",todos.textValue);
   };
 
   const onToggle = id => e => {
