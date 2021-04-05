@@ -21,7 +21,6 @@ export const setItemToAsync = (storageName, todo) => {
             });
         }
     });
-    
 };
 
 export const deleteItemToAsync = (storageName, del) => {
@@ -43,5 +42,4 @@ export const deleteItemToAsync = (storageName, del) => {
             });
         }
     });
-
 }

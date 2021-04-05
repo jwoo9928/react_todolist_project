@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Button, StyleSheet, TextInput, View} from 'react-native';
 
 import * as SaveTodoList from './SaveTodoList';
+import DatePick from "./DatePick"
 
 const TodoInsert = ({onAddTodo}) => {
   const [newTodoItem, setNewTodoItem] = useState('');
@@ -26,6 +27,9 @@ const TodoInsert = ({onAddTodo}) => {
         placeholderTextColor={'#999'}
         autoCorrect={false}
       />
+      <View>
+        <DatePick />
+      </View>
       <View style={styles.button}>
         <Button title={'ADD'} onPress={addTodoHandler} />
       </View>
