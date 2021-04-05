@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.appTitle}>Hello Todolist</Text>
+      <Text style={styles.appTitle}>Hello genius</Text>
       <View style={styles.card}>
         <TodoInsert onAddTodo={addTodo} />
         <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
